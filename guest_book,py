@@ -1,0 +1,16 @@
+while True:
+  name = input("Please enter your name (or type 'quit' to exit): ")
+  if name.lower() == 'quit':
+    break
+  print(f"Hello, {name}!")
+
+
+  # from pathlib import Path
+
+  # path = Path('guest_book.txt')
+  # path.write_text(name)
+
+
+  # Append the name to the file
+  with open('guest_book.txt', 'a') as file:
+    file.write(f"{name}\n")
